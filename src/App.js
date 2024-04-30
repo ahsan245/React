@@ -59,18 +59,18 @@ function App() {
       
       <Alert alert={alert}/>
       <div className="container my-4">
-        <h1 style={{color: mode==='dark'?'white':'black'
+        <h1 style={{color: mode==='dark'?'white':'black', marginTop:'70px'
         }}>Welcome to TextUtil</h1>
         <Routes>
         <Route exact path="/" element={<TextForm heading="Enter the text to analyze below" mode={mode} showAlert= {showAlert}/>}/>
           <Route exact path="/home" element={<TextForm heading="Enter the text to analyze below" mode={mode} showAlert= {showAlert}/>}/>
           <Route exact path="/about" element={<About/>}/>
-          <Route exact path="/sports" element={<Office  setProgress={setProgress} apiKey={apiKey} key="sports" pageSize={6} category='sports'/>}/>
-          <Route exact path="/business" element={<Office setProgress={setProgress}  apiKey={apiKey}  key="business" pageSize={6} category='business'/>}/>
-          <Route exact path="/science" element={<Office setProgress={setProgress}  apiKey={apiKey}   key="science" pageSize={6} category='science'/>}/>
-          <Route exact path="/office" element={<Office setProgress={setProgress}   apiKey={apiKey} key="general" pageSize={6} category='general'/>}/>
-          <Route exact path="/general" element={<Office  setProgress={setProgress} apiKey={apiKey}  key="general" pageSize={6} category='general'/>}/>
-          <Route exact path="/health" element={<Office setProgress={setProgress}  apiKey={apiKey}  key="health" pageSize={6} category='health'/>}/>
+          <Route exact path="/sports" element={<Office mode={mode} setProgress={setProgress} apiKey={apiKey} key="sports" pageSize={6} category='sports'/>}/>
+          <Route exact path="/business" element={<Office mode={mode} setProgress={setProgress}  apiKey={apiKey}  key="business" pageSize={6} category='business'/>}/>
+          <Route exact path="/science" element={<Office  mode={mode}setProgress={setProgress}  apiKey={apiKey}   key="science" pageSize={6} category='science'/>}/>
+          <Route exact path="/office" element={<Office  mode={mode}setProgress={setProgress}   apiKey={apiKey} key="general" pageSize={6} category='general'/>}/>
+          <Route exact path="/general" element={<Office mode={mode}  setProgress={setProgress} apiKey={apiKey}  key="general" pageSize={6} category='general'/>}/>
+          <Route exact path="/health" element={<Office mode={mode} setProgress={setProgress}  apiKey={apiKey}  key="health" pageSize={6} category='health'/>}/>
         </Routes>
      
       </div>

@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class Department extends Component {
+const  Department =(props) => {
  
 
-  render() {
-    let { title, description,imageUrl,newsUrl , author ,publishedAt,source } = this.props;
+    let { title, description,imageUrl,newsUrl , author ,publishedAt,source } = props;
     return (
       <div className="container my-4">
         <div className="card">
@@ -19,14 +18,13 @@ export class Department extends Component {
               {description}
             </p>
             <p className="card-text"><small className="text-muted">By {author} on {new Date(publishedAt).toGMTString()} </small></p>
-            <a href={newsUrl} target='_blank' className="btn btn-sm btn-primary">
+            <a href={newsUrl} target='_blank' className="btn btn-sm btn-primary" rel="noreferrer">
             Read More
             </a>
           </div>
         </div>
       </div>
     );
-  }
 }
 
 export default Department
